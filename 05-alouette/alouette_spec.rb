@@ -1,9 +1,9 @@
 gem 'minitest', '>= 5.0.0'
-require 'minitest/reporters'
+# require 'minitest/reporters'
 require 'minitest/autorun'
 require_relative 'alouette'
 
-Minitest::Reporters.use!
+# Minitest::Reporters.use!
 
 describe Alouette do
   describe "lines_for_verse" do
@@ -18,12 +18,12 @@ describe Alouette do
     end
 
     it "generates the correct line for the first verse" do
-      skip
+
       Alouette.lines_for_verse(0).must_equal ['Et la tête!']
     end
 
     it "generates the correct lines for the third verse" do
-      skip
+
       expected_lines = [
         "Et les yeux!",
         "Et le bec!",
@@ -35,12 +35,12 @@ describe Alouette do
 
   describe "verse" do
     it "returns a string" do
-      skip
+
       Alouette.verse(3).must_be_kind_of String
     end
 
     it "first two lines begin with 'Je te plumerai'" do
-      skip
+      
       lines = Alouette.verse(3).split("\n")
 
       # If there aren't at least 2 lines, don't continue

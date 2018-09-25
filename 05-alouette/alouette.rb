@@ -36,8 +36,17 @@ class Alouette
 
   def self.sing
     song = []
-    song << "Alouette, gentille alouette,/nAlouette, je te plumerai."
 
+    PARTS.each_with_index do |line, index|
+      song << "Alouette, gentille alouette"
+      song << "Alouette, je te plumerai."
+      song << " "
 
+      song <<  self.verse(index)
+      song << " "
+    end
+
+    return song
   end
+
 end
